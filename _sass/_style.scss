@@ -1,19 +1,19 @@
 @import 'mdb/mdb';
 
 $theme-color: #b71c1c;
-$background-color: #fdfdfd;
+$background-color: #02bdb3;
 
 body {
   background-color: $background-color;
 }
 
 footer {
-  color: $dark;
-  background-color: $background-color;
+  color: yellow;
+  background-color: #333;
 }
 
 .card, .list-group-item {
-  background-color: $background-color;
+  background-color: $background-color; // CV and Project Cards background color
 }
 
 .news {

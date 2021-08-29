@@ -2,27 +2,30 @@
 # Site Settings
 # -----------------------------------------------------------------------------
 
-name: Anthony Platanios
-email: e.a.platanios@gmail.com
-description: Personal website of Anthony Platanios.
+name: Eleftherios Mylonas
+email: lefterismyl@gmail.com
+description: Personal website of Eleftherios Mylonas.
 # footer_text: >
 #   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # last_updated: true
 
-url: platanios.org
+icon: 🎓 # the emoji used as the favicon
+url: 
 
 # -----------------------------------------------------------------------------
 # Social Integration
 # -----------------------------------------------------------------------------
-scholar_userid: EFVk-mwAAAAJ
-github_username: eaplatanios
-linkedin_username: eplatanios
-facebook_username: anthony.platanios
-twitter_username: eaplatanios
+orcid_id: 0000-0002-7676-685X # your ORCID ID
+scholar_userid: # your Google Scholar ID
+github_username: lefmylonas
+linkedin_username: eleftherios-lefteris-mylonas
+research_gate_profile: Eleftherios-Mylonas # your profile on ResearchGate
+facebook_username: # your Facebook handle
+twitter_username: # your Twitter handle
 contact_note: Feel free to drop me a line via email.
 
-google_analytics: UA-54519238-1
+google_analytics: UA-XXXXXXXXX
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -38,7 +41,7 @@ collections:
     output: true
     permalink: /projects/:path/
 
-news_limit: 10
+news_limit: 5
 
 # -----------------------------------------------------------------------------
 # Jekyll Settings
@@ -46,7 +49,17 @@ news_limit: 10
 
 # Build settings
 markdown: kramdown
-# highlighter: pygments
+highlighter: rouge
+highlight_theme: monokai
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 
 # Include/Exclude
 include: ['_pages']
@@ -60,7 +73,8 @@ plugins:
 
 # Jekyll-Scholar
 scholar:
-  last_name: Platanios
+  last_name: Mylonas
+  first_name: [Eleftherios, E.]
   style: apa
   locale: en
   sort_by: year

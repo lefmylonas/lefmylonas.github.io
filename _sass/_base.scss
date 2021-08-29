@@ -25,11 +25,11 @@ $brown_orange:  #C68646;
 
 $grey-color-dark:   #333;  /* footer */
 $grey-color-light:  #ddd;  /* navigation bar border */
-$text-color:        rgb(60, 72, 88);
+$text-color:        yellow;
 
 /* Set theme color *************************/
-$theme-color: #b71c1c;
-$background-color: #fdfdfd;
+$theme-color: rgb(228, 228, 0);
+$background-color: #0300ac;
 
 /************************************************************/
 
@@ -73,16 +73,17 @@ footer {
 // Links
 
 a {
-    color: $theme-color;
+    color: #da2525;
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
+        color: lighten(#da2525, 30%);
     }
 }
 
 .plain-link .fa {
-    color: #747373;
+    color: black;
 }
 
 .navbar-brand a {
@@ -127,6 +128,38 @@ a {
     }
 }
 
+.orcid-icon {
+    background: rgb(165, 205, 57);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+
+    &:hover {
+        background: lighten(rgb(165, 205, 57), 20%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+    }
+}
+
+.rg-icon {
+    background: #00ccbb;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+
+    &:hover {
+        background: lighten(#00ccbb, 20%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+    }
+}
+
 .gs-icon {
     background: rgb(80, 134, 236);
     background-clip: text;
@@ -144,16 +177,16 @@ a {
 }
 
 .gh-icon {
-    color: rgb(37, 41, 46);
-    background: rgb(37, 41, 46);
+    color: #828282;
+    background: #828282;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: initial;
 
     &:hover {
-        color: lighten(rgb(37, 41, 46), 20%);
-        background: lighten(rgb(37, 41, 46), 20%);
+        color: lighten(#828282, 20%);
+        background: lighten(#828282, 20%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

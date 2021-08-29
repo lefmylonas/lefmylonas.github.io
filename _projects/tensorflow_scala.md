@@ -26,17 +26,16 @@ are a few useful links:
 
 - Easy manipulation of tensors and computations involving tensors (similar to NumPy in Python):
   
-  ```scala
+  {% highlight scala linenos %}
   val t1 = Tensor( 1.2, 4.5)
   val t2 = Tensor(-0.2, 1.1)
-  t1 + t2 == Tensor(1.0, 5.6)
-  ```
+  t1 + t2 == Tensor(1.0, 5.6){% endhighlight %}
   
 - High-level API for creating, training, and using neural networks. For example, the following code shows how simple it 
   is to train a multi-layer perceptron for MNIST using TensorFlow for Scala. Here we omit a lot of very powerful 
   features such as summary and checkpoint savers, for simplicity, but these are also very simple to use.
   
-  ```scala
+  {% highlight scala linenos %}
   import org.platanios.tensorflow.api._
   import org.platanios.tensorflow.api.tf.learn._
   import org.platanios.tensorflow.data.loaders.MNISTLoader
@@ -67,13 +66,12 @@ are a few useful links:
   
   // Create an estimator and train the model.
   val estimator = Estimator(model)
-  estimator.train(trainData, StopCriteria(maxSteps = Some(1000000)))
-  ```
+  estimator.train(trainData, StopCriteria(maxSteps = Some(1000000))){% endhighlight %}
   
   And by changing a few lines to the following code, you can get checkpoint capability, summaries, and seamless 
   integration with TensorBoard:
   
-  ```scala
+  {% highlight scala linenos %}
   loss = loss >> tf.learn.ScalarSummary("Loss")                  // Collect loss summaries for plotting
   val summariesDir = Paths.get("/tmp/summaries")                 // Directory in which to save summaries and checkpoints
   val estimator = Estimator(model, Configuration(Some(summariesDir)))
@@ -82,8 +80,7 @@ are a few useful links:
     Seq(
       SummarySaverHook(summariesDir, StepHookTrigger(100)),      // Save summaries every 1000 steps
       CheckpointSaverHook(summariesDir, StepHookTrigger(1000))), // Save checkpoint every 1000 steps
-    tensorBoardConfig = TensorBoardConfig(summariesDir))         // Launch TensorBoard server in the background
-  ```
+    tensorBoardConfig = TensorBoardConfig(summariesDir))         // Launch TensorBoard server in the background{% endhighlight %}
   
   If you now browse to `https://127.0.0.1:6006` while training, you can see the training progress:
   
@@ -93,7 +90,7 @@ are a few useful links:
 
 - Low-level graph construction API, similar to that of the Python API, but strongly typed wherever possible:
 
-  ```scala
+  {% highlight scala linenos %}
   import org.platanios.tensorflow.api._
   
   val inputs = tf.placeholder(FLOAT32, Shape(-1, 10))
@@ -104,14 +101,12 @@ are a few useful links:
   }
   val loss = tf.sum(tf.square(predictions - outputs))
   val optimizer = tf.train.AdaGrad(1.0)
-  val trainOp = optimizer.minimize(loss)
-  ```
+  val trainOp = optimizer.minimize(loss){% endhighlight %}
 
 - Numpy-like indexing/slicing for tensors. For example:
   
-  ```scala
-  tensor(2 :: 5, ---, 1) // is equivalent to numpy's 'tensor[2:5, ..., 1]'
-  ```
+  {% highlight scala linenos %}
+  tensor(2 :: 5, ---, 1) // is equivalent to numpy's 'tensor[2:5, ..., 1]'{% endhighlight %}
   
 - Efficient interaction with the native library that avoids unnecessary copying of data. All tensors are created and 
   managed by the native TensorFlow library. When they are passed to the Scala API (e.g., fetched from a TensorFlow 
