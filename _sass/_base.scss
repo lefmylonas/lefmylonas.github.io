@@ -25,7 +25,7 @@ $brown_orange:  #C68646;
 
 $grey-color-dark:   #333;  /* footer */
 $grey-color-light:  #ddd;  /* navigation bar border */
-$text-color:        yellow;
+$text-color:        white;
 
 /* Set theme color *************************/
 $theme-color: rgb(228, 228, 0);
@@ -73,7 +73,7 @@ footer {
 // Links
 
 a {
-    color: #da2525;
+    color: #ff0000;
     text-decoration: none;
 
     &:hover {
@@ -243,8 +243,8 @@ a {
 }
 
 .wp-icon {
-    color: rgb(33, 117, 155);
-    background: rgb(33, 117, 155);
+    color: #15198e;
+    background: #15198e;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
