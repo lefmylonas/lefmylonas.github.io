@@ -10,7 +10,7 @@ description: Personal website of Eleftherios Mylonas.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # last_updated: true
 
-icon: 🎓 # the emoji used as the favicon
+icon: 💻 # the emoji used as the favicon
 url: 
 
 # -----------------------------------------------------------------------------
@@ -19,7 +19,7 @@ url:
 orcid_id: 0000-0002-7676-685X # your ORCID ID
 scholar_userid: # your Google Scholar ID
 github_username: lefmylonas
-linkedin_username: eleftherios-lefteris-mylonas
+linkedin_username: eleftherios-mylonas
 research_gate_profile: Eleftherios-Mylonas # your profile on ResearchGate
 facebook_username: # your Facebook handle
 twitter_username: # your Twitter handle
