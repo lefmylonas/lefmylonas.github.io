@@ -29,7 +29,7 @@ $text-color:        white;
 
 /* Set theme color *************************/
 $theme-color: rgb(228, 228, 0);
-$background-color: #0300ac;
+$background-color: rgb(129, 203, 233);
 
 /************************************************************/
 
@@ -73,12 +73,12 @@ footer {
 // Links
 
 a {
-    color: #ff0000;
+    color: rgb(255, 255, 0);
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
-        color: lighten(#da2525, 30%);
+        color: darken(rgb(255, 255, 0), 5%);
     }
 }
 
@@ -309,7 +309,7 @@ progress::-moz-progress-bar {
 // Publications
 
 .bibliography-year {
-    color: #ddd;
+    color: rgb(255, 255, 255);
     text-align: right;
 }
 

@@ -5,13 +5,15 @@
 name: Eleftherios Mylonas
 email: lefterismyl@gmail.com
 description: Personal website of Eleftherios Mylonas.
-# footer_text: >
-#   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-#   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text: >
+  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # last_updated: true
 
 icon: 💻 # the emoji used as the favicon
 url: 
+blog_name: blog
+blog_description: Personal blog of Eleftherios Mylonas
 
 # -----------------------------------------------------------------------------
 # Social Integration

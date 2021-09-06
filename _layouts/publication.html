@@ -5,11 +5,11 @@
   <div class="col-sm-1 p-0 abbr">
     {% if entry.abbr %}
       {% if site.data.venues[entry.abbr] %}
-        <a class="badge font-weight-bold danger-color-dark align-middle" style="width: 53px;" href="{{site.data.venues[entry.abbr].url}}" target="_blank">
+        <a class="badge font-weight-bold danger-color-dark align-middle" style="width: 65px;" href="{{site.data.venues[entry.abbr].url}}" target="_blank">
           {{entry.abbr}}
         </a>
       {% else %}
-        <span class="badge font-weight-bold danger-color-dark align-middle" style="width: 53px;">
+        <span class="badge font-weight-bold danger-color-dark align-middle" style="width: 65px;">
           {{entry.abbr}}
         </span>
       {% endif %}
@@ -21,36 +21,47 @@
       <h5 class="title mb-0">{{entry.title}}.</h5>
       <div class="author">
         {% for author in entry.author_array %}
-          {% if forloop.length == 1 %}
-            {% if author.last contains site.scholar.last_name %}
-              <nobr><em>{{author.first}} {{author.last}}</em>.</nobr>
-            {% else %}
-              {% if site.data.coauthors[author.last] %}
-                <nobr><a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>.</nobr>
-              {% else %}
-                <nobr>{{author.first}} {{author.last}},</nobr>
+          {% assign author_is_self = false %}
+          {% if author.last == site.scholar.last_name%}
+            {% if site.scholar.first_name contains author.first%}
+              {% assign author_is_self = true %}
+            {% endif %}
+          {% endif %}
+          {% assign coauthor_url = nil %}
+          {% if site.data.coauthors[author.last] %}
+            {% for coauthor in site.data.coauthors[author.last] %}
+              {% if coauthor.firstname contains author.first %}
+                {% assign coauthor_url = coauthor.url %}
+                {% break %}
               {% endif %}
+            {% endfor %}
+          {% endif %}
+          
+          {% if forloop.length == 1 %}
+            {% if author_is_self %}
+              <nobr><em>{{author.first}} {{author.last}}</em></nobr>
+            {% else %}
+              {{author.first}} {{author.last}}
             {% endif %}
           {% else %}
             {% unless forloop.last %}
-              {% if author.last contains site.scholar.last_name %}
-                <nobr><em>{{author.first}} {{author.last}}</em>,</nobr>
+              {% if author_is_self %}
+                <nobr><em>{{author.first}} {{author.last}}</em></nobr>,
               {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  <nobr><a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>,</nobr>
+                {% if coauthor_url %}
+                  <a href="{{coauthor_url}}" target="_blank">{{author.first}} {{author.last}}</a>,
                 {% else %}
-                  <nobr>{{author.first}} {{author.last}},</nobr>
+                {{author.first}} {{author.last}},
                 {% endif %}
               {% endif %}
             {% else %}
-              and
-              {% if author.last == site.scholar.last_name %}
-                <nobr><em>{{author.first}} {{author.last}}</em>.</nobr>
+              {% if author_is_self %}
+                and <nobr><em>{{author.first}} {{author.last}}</em></nobr>
               {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  <nobr><a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>.</nobr>
+                {% if coauthor_url %}
+                  and <a href="{{coauthor_url}}" target="_blank">{{author.first}} {{author.last}}</a>
                 {% else %}
-                  <nobr>{{author.first}} {{author.last}}</nobr>
+                  and {{author.first}} {{author.last}}
                 {% endif %}
               {% endif %}
             {% endunless %}
@@ -83,6 +94,9 @@
         {% endif %}
         {% if entry.html %}
           <a class="badge grey waves-effect font-weight-light mr-1" href="{{ entry.html }}" target="_blank">HTML</a>
+        {% endif %}
+        {% if entry.website %}
+          <a class="badge grey waves-effect font-weight-light mr-1" href="{{ entry.website }}" target="_blank">Website</a>
         {% endif %}
         {% if entry.pdf %}
           <a class="badge grey waves-effect font-weight-light mr-1" href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl }}" target="_blank">PDF</a>
