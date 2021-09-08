@@ -28,7 +28,7 @@ $grey-color-light:  #ddd;  /* navigation bar border */
 $text-color:        white;
 
 /* Set theme color *************************/
-$theme-color: rgb(228, 228, 0);
+$theme-color: #962f33;
 $background-color: rgb(129, 203, 233);
 
 /************************************************************/
@@ -38,7 +38,7 @@ $background-color: rgb(129, 203, 233);
 }
 
 body {
-    color: $text-color;
+    color: #212529;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 .table {
-    color: $text-color;
+    color: #212529;
 }
 
 .navbar a {
@@ -73,12 +73,12 @@ footer {
 // Links
 
 a {
-    color: rgb(255, 255, 0);
+    color: #962f33;
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
-        color: darken(rgb(255, 255, 0), 5%);
+        color: lighten(#962f33,30%);
     }
 }
 
@@ -91,7 +91,7 @@ a {
 }
 
 .navbar-active a {
-    color: $theme-color !important;
+    color: #fffc9e !important;
 }
 
 .arrow-icon {
@@ -265,8 +265,9 @@ a {
 }
 
 .bibliography .abbr a {
+    background: #962f33 !important;
     &:hover {
-        background: #ff4444 !important;
+        background: lighten(#962f33, 10%) !important;
     }
 }
 
@@ -321,7 +322,7 @@ progress::-moz-progress-bar {
 
         .author {
             a {
-                color: $text-color;
+                color: #212529;
                 border-bottom: 1px dashed;
 
                 &:hover {
@@ -333,7 +334,7 @@ progress::-moz-progress-bar {
             nobr > em {
                 font-weight: bold;
                 font-style: normal;
-                color: $theme-color;
+                color: #962f33;
             }
         }
     }
