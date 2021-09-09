@@ -93,7 +93,10 @@ git checkout -b $DEPLOY_BRANCH
 
 # Build site
 bundle exec jekyll build
-apindex ./_site/blog/2015/
+# Run customized apindex to generate static directory indexing pages for blog posts of specific year
+cd ./_site/blog/
+find ./* -mindepth 0 -maxdepth 0 -type d -exec apindex ./{} \;
+cd ../..
 
 # Delete and move files
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
