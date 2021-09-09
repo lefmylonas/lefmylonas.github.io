@@ -78,7 +78,7 @@ a {
 
     &:hover {
         text-decoration: none;
-        color: lighten(#962f33,30%);
+        color: red;
     }
 }
 
@@ -339,3 +339,57 @@ progress::-moz-progress-bar {
         }
     }
 }
+
+.header-bar {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 5rem; 
+}
+.header-bar h1 {
+    color: #212529;
+    font-size: 5rem; 
+}
+  
+.post-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0; 
+}
+.post-list li {
+  border-bottom: 1px solid #e8e8e8;
+  list-style: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem; 
+}
+.post-list li .post-meta {
+    color: #212529;
+    font-size: 0.875rem;
+    margin-bottom: 0; 
+}
+.post-list li a {
+    color: #962f33;
+    text-decoration: none; 
+}
+.post-list li a:hover {
+    color: red; 
+}
+
+.pagination {
+    .page-item {
+      .page-link {
+        color: #962f33;
+        &:hover {
+          color: red;
+          background-color: rgb(255, 238, 238);
+        }
+      }
+      &.active .page-link {
+        color: #212529;
+        background-color: white;
+        &:hover {
+          background-color: rgb(255, 238, 238);
+        }
+      }
+    }
+  }

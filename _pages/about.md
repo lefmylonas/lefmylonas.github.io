@@ -2,7 +2,6 @@
 layout: page
 permalink: /
 title: about
-nav: about
 ---
 
 <div class="text-center mt-5">
