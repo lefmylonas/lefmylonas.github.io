@@ -14,8 +14,8 @@ title: about
     <div class="col-sm-6">
       <h6 class="mt-1 text-left text-sm-left" style="font-family: monospace; font-stretch: ultra-condensed;">
         <br/>Applied Electronics Laboratory<br/>
-        <a href="http://www.ece.upatras.gr/" target="_blank">Electrical and Computer Engineering Department</a><br/>
-        <a href="https://www.upatras.gr/" target="_blank">University of Patras</a><br/>
+        <a href="http://www.ece.upatras.gr/index.php/en/" target="_blank">Electrical and Computer Engineering Department</a><br/>
+        <a href="https://www.upatras.gr/en/" target="_blank">University of Patras</a><br/>
         Patras, Greece 26500
       </h6>
     </div>
@@ -28,7 +28,7 @@ title: about
 <!-- Introduction -->
 
 <div class="col text-justify p-0">
-  <span class="font-weight-bold">Eleftherios Mylonas</span> received his Diploma degree in 2019 from the <a href="http://www.ece.upatras.gr/" target="_blank">Electrical and Computer Engineering Department</a> of University of Patras. He holds research experience in the area of 5G communications for smart grid and Industry 4.0 applications from participating in Horizon 2020 projects. He is currently pursuing a PhD degree at University of Patras. His main research topic is Special purpose edge processors for digital twin applications. His research interests include Next Generation IoT, Digital twins, Cyber-Physical Systems, Intelligent Edge / AI-enabled Edge Computing.
+  <span class="font-weight-bold">Eleftherios (Lefteris) Mylonas</span> received his Diploma degree in 2019 from the <a href="http://www.ece.upatras.gr/" target="_blank">Electrical and Computer Engineering Department</a> of University of Patras. He holds research experience in the area of 5G communications for smart grid and Industry 4.0 applications from participating in Horizon 2020 projects. He is currently pursuing a PhD degree at University of Patras. His main research topic is Special purpose edge processors for digital twin applications. His research interests include Next Generation IoT, Digital twins, Cyber-Physical Systems, Intelligent Edge / AI-enabled Edge Computing.
 </div>
 
 <!-- News 
